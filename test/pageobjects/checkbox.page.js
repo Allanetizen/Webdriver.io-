@@ -1,4 +1,4 @@
-import Page from './page'
+const Page = require('./page');
 
 class CheckboxPage extends Page {
     /**
