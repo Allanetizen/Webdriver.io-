@@ -15,4 +15,4 @@ class CheckboxPage extends Page {
     }
 }
 
-export default new CheckboxPage()
+module.exports = new  CheckboxPage()

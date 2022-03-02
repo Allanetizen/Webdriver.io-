@@ -17,10 +17,6 @@ describe("My Login application", () => {
     expect(linkList).toBeDisplayed();
   });
   
-  it("click check boxes", () => {
-    const checkBox = $("#checkboxes");
-    checkBox.click();
-  });
-
+  
   
 });
