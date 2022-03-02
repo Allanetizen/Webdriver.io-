@@ -3,7 +3,7 @@ describe('input  page', ()=> {
         browser.url('/inputs')
         const inputField = $('input')
         //set input value
-        inputField.setValue('test123');
+        inputField.setValue('123');
         //output the value in log
         console.log(inputField.getValue())
 
