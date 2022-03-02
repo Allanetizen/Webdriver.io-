@@ -1,4 +1,3 @@
-const expect = require('chai').expect;
 const fetch = require('node-fetch');
 
 describe('link tests', function() {
