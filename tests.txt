@@ -10,7 +10,10 @@ remove
 inputs
 links
 jsalerts
-notifcations
+notifications
+add_delete
+forgot_password
+
 ---- ----
 
 failed
