@@ -7,6 +7,8 @@ describe("Javascript alerts", () => {
 
     //click button
     btnAlert.click();
+    //start alert
+    browser.execute('window.alert()');
     //get alert
     browser.getAlertText();
 
@@ -24,6 +26,8 @@ describe("Javascript alerts", () => {
 
     //click button
     btnConfirm.click();
+    //start alert
+    browser.execute('window.alert()');
     //get alert
     browser.getAlertText();
     //Assertion
@@ -33,12 +37,20 @@ describe("Javascript alerts", () => {
   it("should test prompt", () => {
     browser.url("/javascript_alerts");
     const btnPrompt = $("button=Click for JS Prompt");
+    //result
+    const resultText = $("#result");
 
     //click button
     btnPrompt.click();
-    //get alert
+    //start alert
+    browser.execute('window.alert()');
+    //get alert text
     browser.getAlertText();
     //Assertion
     expect(btnPrompt).toBeClickable();
+    expect(resultText).toHaveAttr('id')
+    
+
+
   });
 });
