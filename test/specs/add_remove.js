@@ -2,7 +2,7 @@
 describe('Add and delete elements', function () {
     it('should add elements', function () {
        //go to link 
-       browser.url('/add_remove_elements/')
+       browser.url('https://the-internet.herokuapp.com/add_remove_elements/')
        //button for adding element
        const btnAdd=  $('button=Add Element')
        //click add button
