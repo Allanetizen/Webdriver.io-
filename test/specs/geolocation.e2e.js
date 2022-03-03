@@ -5,6 +5,8 @@ describe("Geolocation", () => {
         
         //click button 
         btnLocate.click();
+        //Assertion
+       expect(btnLocate).toBeClickable()
         
       });
 });

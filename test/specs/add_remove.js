@@ -7,6 +7,8 @@ describe('Add and delete elements', function () {
        const btnAdd=  $('button=Add Element')
        //click add button
        btnAdd.click();
+       //Assertion
+       expect(btnAdd).toBeClickable()
     });
     it('should delete elements', function () {
         //go to link 
@@ -15,5 +17,7 @@ describe('Add and delete elements', function () {
         const btnDelete=  $('button=Delete')
         //click delete button
         btnDelete.click();
+        //
+        expect(btnDelete).toBeClickable()
      });
 });

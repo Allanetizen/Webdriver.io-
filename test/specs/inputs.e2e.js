@@ -5,7 +5,8 @@ describe('input  page', ()=> {
         //set input value
         inputField.setValue('123');
         //output the value in log
-        console.log(inputField.getValue())
+       //Assertion
+       expect(inputField).toBeExisting()
 
 
 

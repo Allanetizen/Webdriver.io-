@@ -5,6 +5,8 @@ describe("Javascript alerts", () => {
         
         //click button 
         btnAlert.click();
+        //Assertion
+       expect(btnAlert).toBeClickable()
         
       });
       it("should test confirm", () => {
@@ -13,6 +15,8 @@ describe("Javascript alerts", () => {
         
         //click button 
         btnConfirm.click();
+        //Assertion
+       expect(btnConfirm).toBeClickable()
         
       });
       it("should test prompt", () => {
@@ -21,6 +25,8 @@ describe("Javascript alerts", () => {
         
         //click button 
         btnPrompt.click();
+        //Assertion
+       expect(btnPrompt).toBeClickable()
         
       });
 });

@@ -1,4 +1,3 @@
-
 describe('Homepage', function () {
     it('should load properly', function () {
         // load the page
