@@ -5,11 +5,13 @@ describe('input  page', ()=> {
         browser.url('/inputs')
         const inputField = $('input')
         //set input value
+         //Assertion
+       expect(inputField).toBeExisting()
+       
         inputField.setValue('123');
         //output the value in log
        
-        //Assertion
-       expect(inputField).toBeExisting()
+       
        expect(inputField).toHaveValueContaining('123')
       //log the value in the console
        console.log(inputField.getValue())
