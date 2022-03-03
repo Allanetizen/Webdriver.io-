@@ -10,13 +10,20 @@ describe("Javascript alerts", () => {
     //start alert
     browser.execute('window.alert()');
     //get alert
-    browser.getAlertText();
+    expect(browser.getAlertText()).toHaveTextContaining('I am a JS Confirm');
 
     //Assertion
     expect(btnAlert).toBeClickable();
     expect(resultText).toHaveTextContaining(
       "You successfully clicked an alert"
     );
+
+    expect()
+
+
+
+
+
   });
   it("should test confirm", () => {
     browser.url("/javascript_alerts");

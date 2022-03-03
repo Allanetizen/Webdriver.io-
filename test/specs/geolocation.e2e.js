@@ -11,19 +11,19 @@ describe("Geolocation", () => {
         const longitude =$('#long-value')
         //map link
         const mapLink =$('a=See it on Google')
-        //click map link
-        mapLink.click()
-
-        
-        //click button 
-        btnLocate.click();
+      
         //Assertion
        expect(btnLocate).toBeClickable()
 
+         //click button 
+       btnLocate.click();
+        //assertion for map link 
        expect(mapLink).toBeClickable()
+       //click map link
+       mapLink.click()
        //assertion for location
        expect(btnLocate).toHaveValueContaining(location)
-       //assertion for map link 
+       
        expect(btnLocate).toHaveValueContaining("Google")
         //display both coordinates
        expect(latitude).toBeDisplayed()
