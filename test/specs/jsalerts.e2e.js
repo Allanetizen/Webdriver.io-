@@ -1,5 +1,3 @@
-
-
 describe("Javascript alerts", () => {
   it("should test alert", () => {
     browser.url("/javascript_alerts");
@@ -9,7 +7,9 @@ describe("Javascript alerts", () => {
 
     //click button
     btnAlert.click();
-    
+    //get alert
+    browser.getAlertText();
+
     //Assertion
     expect(btnAlert).toBeClickable();
     expect(resultText).toHaveTextContaining(
@@ -24,17 +24,20 @@ describe("Javascript alerts", () => {
 
     //click button
     btnConfirm.click();
+    //get alert
+    browser.getAlertText();
     //Assertion
     expect(btnConfirm).toBeClickable();
+    expect(resultText).toHaveTextContaining("You clicked: Ok");
   });
   it("should test prompt", () => {
     browser.url("/javascript_alerts");
     const btnPrompt = $("button=Click for JS Prompt");
-    //result
-    const resultText = $("#result");
 
     //click button
     btnPrompt.click();
+    //get alert
+    browser.getAlertText();
     //Assertion
     expect(btnPrompt).toBeClickable();
   });
