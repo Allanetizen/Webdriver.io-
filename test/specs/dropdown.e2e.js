@@ -4,13 +4,16 @@ describe('show the drop down items', function () {
         
         //dropDown.
         const selectBox = $('#dropdown');
+        //list of options
+        const list = $('select')
         //click dropdown
 
         selectBox.click()
-        console.log(selectBox.getText()); // returns "someValue0"
-        selectBox.selectByIndex(0);
-        console.log(selectBox.getText())
+        
         expect(selectBox).toHaveTextContaining("Dropdown List");
+        //select to  have 3 options
+        expect(list).toHaveChildren(3)
       });
     
 })
+
