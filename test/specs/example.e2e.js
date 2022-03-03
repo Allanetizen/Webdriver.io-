@@ -11,11 +11,7 @@ describe("My Login application", () => {
       "You logged into a secure area!"
     );
   });
-  it("display links ", () => {
-    const linkList = $("#content");
-
-    expect(linkList).toBeDisplayed();
-  });
+  
   
   
   
