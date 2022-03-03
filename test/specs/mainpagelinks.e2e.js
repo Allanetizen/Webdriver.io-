@@ -3,6 +3,7 @@ describe("main page", function(){
 
         //list of links
         const listItems = $$('ul li')
+        
         //assertion
         expect(listItems).toBeElementsArrayOfSize(44)
         

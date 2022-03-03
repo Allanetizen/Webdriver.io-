@@ -14,14 +14,18 @@ describe("JQuery Ui page",function(){
     it("should click on enabled link", function(){
 
         browser.getUrl('/jqueryui/menu')
+
         //enabled link
         const enabledLink =$('a=Enabled')
+
         //link hovered to
         const pdfLink =$('a=PDF')
         
         browser.elementHover(pdfLink)
+
         //click
         enabledLink.click()
+        
         //assertions
         expect(enabledLink).toBeClickable()
         expect(enabledLink).toHaveTextContaining(

@@ -1,18 +1,35 @@
 
+
+
 describe('show the drop down items', function () {
     it("show the dropdown list text", () => {
+
+      browser.url('/dropdown')
         
         //dropDown.
-        const selectBox = $('#dropdown');
-        //list of options
-        const list = $('select')
-        //click dropdown
+        const drp = $('#dropdown');
 
-        selectBox.click()
+        //click the dropdown
+        const list = $$("select option");
+       list.forEach((element) => {
+           element.click();
+       });
         
-        expect(selectBox).toHaveTextContaining("Dropdown List");
-        //select to  have 3 options
-        expect(list).toHaveChildren(3)
+
+        //select using index
+        optOne=drp.selectByIndex(1)
+
+        optTwo=drp.selectByIndex(2)
+      //assertions
+        
+        expect(optOne).toHaveValueContaining(1)
+        expect(optTwo).toHaveValueContaining(2)
+
+        expect(optOne).toHaveTextContaining("Option 1")
+        expect(optTwo).toHaveTextContaining("Option 2")
+
+
+
       });
     
 })
