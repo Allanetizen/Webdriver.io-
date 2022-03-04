@@ -1,7 +1,3 @@
-
-
-
-
 describe('show the drop down items', function () {
     it("show the dropdown option 2", () => {
 
@@ -9,6 +5,8 @@ describe('show the drop down items', function () {
         
         //dropDown.
         const drp = $('#dropdown');
+
+        drp.click()
 
         //select using value att
                 
