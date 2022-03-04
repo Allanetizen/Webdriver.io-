@@ -12,20 +12,20 @@ describe('show the drop down items', function () {
                 
         // const optOne = drp.selectByAttribute('value', '1');
 
-        const optTwo = drp.selectByAttribute('value', '1');
+        const optTwo = drp.selectByAttribute('value', '2');
 
         
 
         //click option 2
-        optTwo.click()
+        // optTwo.click()
 
 
-        //get value for option2
+        // //get value for option2
 
-        const value = optTwo.getValue()
+        // const value = optTwo.getValue()
 
         //assert option 2
-        expect(value).toHaveValueContaining('Option 2')
+        expect(optTwo).toHaveValueContaining('Option 2')
 
         
 
