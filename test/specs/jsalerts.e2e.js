@@ -1,3 +1,5 @@
+
+
 describe("Javascript alerts", () => {
   it("should test alert", () => {
     browser.url("/javascript_alerts");
@@ -9,6 +11,8 @@ describe("Javascript alerts", () => {
     btnAlert.click();
     //start alert
     browser.execute("window.alert()");
+
+
     //get alert
     expect(alertText).toHaveTextContaining("I am a JS Alert");
     //click ok
@@ -62,8 +66,7 @@ describe("Javascript alerts", () => {
   it("should test prompt", () => {
     browser.url("/javascript_alerts");
     const btnPrompt = $("button=Click for JS Prompt");
-    //result
-    const resultText = $("#result");
+    
     //Alert text
     const alertText = browser.getAlertText();
     //click button
@@ -71,17 +74,22 @@ describe("Javascript alerts", () => {
 
     //assert
     expect(alertText).toHaveTextContaining("I am a JS prompt");
-
+    
+      //result
+    const resultText = $("#result");
     //start alert
     browser.execute("window.alert()");
+
     //enter text Yes
     browser.sendAlertText("Yes");
     //Press the OK button
+    
     //accept alert
     browser.acceptAlert();
 
     //Assertion
     expect(btnPrompt).toBeClickable();
-    expect(resultText).toHaveAttr("id");
+    expect(resultText).toHaveTextContaining('Yes')
+    
   });
 });
