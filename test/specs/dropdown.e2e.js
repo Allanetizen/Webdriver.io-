@@ -1,3 +1,4 @@
+const { expect } = require("chai");
 
 
 
@@ -8,34 +9,29 @@ describe('show the drop down items', function () {
         
         //dropDown.
         const drp = $('#dropdown');
-        const value = drp.getValue()
-
-        //click the dropdown
-        const list = $$("select option");
-       list.forEach((element) => {
-           element.click();
-       });
-
-        //select using index
+        
+        //select using value att
                 
-        optOne=drp.selectByIndex(1)
+        // const optOne = drp.selectByAttribute('value', '1');
 
-        optTwo=drp.selectByIndex(2)
-
-        drp.click()
-
-        expect(value).toHaveValue('Option 2')
-
+        const optTwo = drp.selectByAttribute('value', '1');
 
         
-      //assertions
-        
-        expect(optOne).toHaveValueContaining(1)
-        expect(optTwo).toHaveValueContaining(2)
 
-        expect(optOne).toHaveTextContaining("Option 1")
-        expect(optTwo).toHaveTextContaining("Option 2")
-       
+        //click option 2
+        optTwo.click()
+
+
+        //get value for option2
+
+        const value = optTwo.getValue()
+
+        //assert option 2
+        expect(value).toHaveValueContaining('Option 2')
+
+        
+
+      
 
       });
     
