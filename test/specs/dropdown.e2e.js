@@ -1,4 +1,4 @@
-const { expect } = require("chai");
+
 
 
 
@@ -9,7 +9,7 @@ describe('show the drop down items', function () {
         
         //dropDown.
         const drp = $('#dropdown');
-        
+
         //select using value att
                 
         // const optOne = drp.selectByAttribute('value', '1');
