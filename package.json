@@ -15,7 +15,7 @@
         "wdio-chromedriver-service": "^7.2.8"
     },
     "scripts": {
-        "test":"wdio"
+        "test": "wdio"
     },
     "dependencies": {
         "webdriverio": "^7.16.16"

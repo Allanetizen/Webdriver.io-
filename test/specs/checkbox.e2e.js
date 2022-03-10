@@ -1,5 +1,20 @@
 const CheckboxPage = require('../pageobjects/checkbox.page');
+
 describe('checkboxes', function () {
+
+
+
+
+    it('checkbox 1 should be enabled', function () {
+
+        CheckboxPage.open()
+
+        expect(CheckboxPage.firstCheckbox).toBeSelected()
+
+        CheckboxPage.firstCheckbox.click()
+
+        expect(CheckboxPage.firstCheckbox).not.toBeSelected()
+    })
     it('checkbox 2 should be enabled', function () {
 
         CheckboxPage.open()
@@ -9,7 +24,17 @@ describe('checkboxes', function () {
         expect(CheckboxPage.lastCheckbox).toBeSelected()
     })
 
-    it('checkbox 1 should be enabled after clicking on it', function () {
+    it('check all checkboxes', function () {
+
+        CheckboxPage.open()
+
+        expect(CheckboxPage.firstCheckbox).toBeSelected()
+
+        CheckboxPage.firstCheckbox.click()
+
+        expect(CheckboxPage.firstCheckbox).toBeSelected()
+    })
+    it('uncheck all checkboxes', function () {
 
         CheckboxPage.open()
 
@@ -17,6 +42,6 @@ describe('checkboxes', function () {
 
         CheckboxPage.firstCheckbox.click()
 
-        expect(CheckboxPage.firstCheckbox).toBeSelected()
+        expect(CheckboxPage.firstCheckbox).not.toBeSelected()
     })
 })
